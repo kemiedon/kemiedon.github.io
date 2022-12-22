@@ -5,7 +5,7 @@ $(function() {
         url: cors + "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-D0047-063?Authorization=CWB-A13D4A9A-CCDC-492F-B370-A3E7289AE3C7&elementName=T",
         dataType: 'json',
         success: res => {
-            console.log(res.records.localtions)
+            console.log(res.records)
             $('#city_name').html(res.records.locations.locationsName);
             $('#district').html(res.records.locations.localtion.locationName);
             $('#tempture').html(res.records.locations.localtion.weatherElement[0].time[0].elementValue.value + "&#176;");
