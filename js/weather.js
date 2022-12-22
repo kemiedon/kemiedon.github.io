@@ -7,7 +7,7 @@ $(function() {
         headers: {
             'Access-Control-Allow-Methods': 'GET, POST',
             'Access-Control-Allow-Credentials': true,
-            'Access-Control-Allow-Origin': '*'
+            'Access-Control-Allow-Origin': 'https://kemiedon.github.io'
         },
         success: res => {
             console.log(res)
