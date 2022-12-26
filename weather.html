@@ -27,7 +27,7 @@
                     <div class="d-flex flex-column block first-block" v-for="(day, i) in week">
                         <small class="text-muted mb-0">{{day}}</small>
                         <div class="text-center"><img class="symbol-img" :src="icons[i]"></div>
-                        <h6><strong>{{week_tempture[i]}}&#176;</strong></h6>
+                        <h6><strong>{{week_tempture[i+1].elementValue[0].value}}&#176;</strong></h6>
                     </div>
 
                 </div>
