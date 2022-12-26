@@ -26,9 +26,9 @@ const app = {
 
                     this.week_tempture.push(degree + "&#176;");
                     if (degree > 18)
-                        icons.push('https://i.imgur.com/Shrg84B.png');
+                        this.icons.push('https://i.imgur.com/Shrg84B.png');
                     else
-                        icons.push('https://i.imgur.com/BeWfUuG.png');
+                        this.icons.push('https://i.imgur.com/BeWfUuG.png');
                 }
                 console.log(this.week_tempture);
             })
