@@ -15,10 +15,7 @@ $(function() {
             $('#city_name').html(res.records.locations[0].locationsName);
             $('#district').html(res.records.locations[0].location[0].locationName);
             $('#tempture').html(tempture + "&#176;");
-            if (tempture > 18)
-                $('.city-symbol').attr('src', 'https://i.imgur.com/Shrg84B.png');
-            else
-                $('.city-symbol').attr('src', 'https://i.imgur.com/BeWfUuG.png');
+
             let j = 0;
             for (var i = 1; i < 10; i += 2) {
                 let degree = res.records.locations[0].location[0].weatherElement[0].time[i].elementValue[0].value;
