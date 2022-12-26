@@ -11,12 +11,17 @@ $(function() {
             const html3 = `"></div><h6><strong>`;
             const html4 = `&#176;</strong></h6>`;
             let week_html = '';
+            let tempture = res.records.locations[0].location[0].weatherElement[0].time[0].elementValue[0].value;
             $('#city_name').html(res.records.locations[0].locationsName);
             $('#district').html(res.records.locations[0].location[0].locationName);
-            $('#tempture').html(res.records.locations[0].location[0].weatherElement[0].time[0].elementValue[0].value + "&#176;");
-
+            $('#tempture').html(tempture + "&#176;");
+            if (tempture > 18)
+                $('.city-symbol').attr('src', 'https://i.imgur.com/Shrg84B.png');
+            else
+                $('.city-symbol').attr('src', 'https://i.imgur.com/BeWfUuG.png');
+            let j = 0;
             for (var i = 1; i < 6; i += 2) {
-                let j = 0;
+
                 let degree = res.records.locations[0].location[0].weatherElement[0].time[i].elementValue[0].value;
                 icon = (degree > 18) ? "https://i.imgur.com/Shrg84B.png" : "https://i.imgur.com/BeWfUuG.png";
                 week_html = week_html + html1 + week[j] + html2 + icon
