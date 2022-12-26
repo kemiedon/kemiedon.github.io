@@ -5,11 +5,12 @@ $(function() {
         type: "GET",
         dataType: "json",
         success: function(res) {
+            console.log(res.records.locations[0].location[0]);
             const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
             const html1 = `<div class="d-flex flex-column block"><small class="text-muted mb-0">`;
             const html2 = `</small><div class="text-center"><img class="symbol-img" src="`;
             const html3 = `"></div><h6><strong>`;
-            const html4 = `&#176;</strong></h6>`;
+            const html4 = `&#176;</strong></h6></div>`;
             let week_html = '';
             let tempture = res.records.locations[0].location[0].weatherElement[0].time[0].elementValue[0].value;
             $('#city_name').html(res.records.locations[0].locationsName);
