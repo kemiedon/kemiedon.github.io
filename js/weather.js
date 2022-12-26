@@ -19,8 +19,8 @@ $(function() {
                 let j = 0;
                 let degree = res.records.locations[0].location[0].weatherElement[0].time[i].elementValue[0].value;
                 icon = (degree > 18) ? "https://i.imgur.com/Shrg84B.png" : "https://i.imgur.com/BeWfUuG.png";
-                week_html += html1 + week[j] + html2 + icon
-                week_html += html3 + degree + html4;
+                week_html = week_html + html1 + week[j] + html2 + icon
+                week_html = week_html + html3 + degree + html4;
                 console.log(week_html);
                 j++;
             }
