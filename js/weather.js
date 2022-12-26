@@ -20,15 +20,20 @@ $(function() {
             else
                 $('.city-symbol').attr('src', 'https://i.imgur.com/BeWfUuG.png');
             let j = 0;
-            for (var i = 1; i < 6; i += 2) {
-
+            for (var i = 1; i < 10; i += 2) {
                 let degree = res.records.locations[0].location[0].weatherElement[0].time[i].elementValue[0].value;
+                console.log(degree);
                 icon = (degree > 18) ? "https://i.imgur.com/Shrg84B.png" : "https://i.imgur.com/BeWfUuG.png";
-                week_html = week_html + html1 + week[j] + html2 + icon
-                week_html = week_html + html3 + degree + html4;
-                console.log(week_html);
+                if (j < 5) {
+                    week_html = week_html + html1 + week[j] + html2 + icon
+                    week_html = week_html + html3 + degree + html4;
+                }
+
+
                 j++;
             }
+            console.log(week_html);
+            $('#weekday').html(week_html);
         },
 
         error: function() {
