@@ -24,7 +24,7 @@ const app = {
                 for (let i = 0; i < res.data.records.locations[0].location[0].weatherElement[0].time.length; i += 2) {
                     let j = 0
                     var degree = res.data.records.locations[0].location[0].weatherElement[0].time[i].elementValue[0].value;
-
+                    console.log(degree);
                     this.week_tempture[j] = degree + "&#176;";
                     if (degree > 18)
                         this.icons[j] = 'https://i.imgur.com/Shrg84B.png';
