@@ -6,7 +6,7 @@ $(function() {
         dataType: "json",
         success: function(res) {
             const week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-            const html = `<div class="d-flex flex-column block"><small class="text-muted mb-0">`;
+            const html1 = `<div class="d-flex flex-column block"><small class="text-muted mb-0">`;
             const html2 = `</small><div class="text-center"><img class="symbol-img" src="`;
             const html3 = `"></div><h6><strong>`;
             const html4 = `&#176;</strong></h6>`;
