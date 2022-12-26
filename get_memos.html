@@ -6,26 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的待辦清單</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/memo.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
     <script src="js/memo.js"></script>
 </head>
 
 <body>
-    <ol class="list">
-        <li class="item">
-            <h2 class="headline">Number one</h2>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, distinctio ad corporis, laboriosam unde provident, architecto tenetur ea odio debitis delectus explicabo eum obcaecati vitae facere iusto laborum consequuntur neque.</span>
-        </li>
-        <li class="item">
-            <h2 class="headline">Number two</h2>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, distinctio ad corporis, laboriosam unde provident, architecto tenetur ea odio debitis delectus explicabo eum obcaecati vitae facere iusto laborum consequuntur neque.</span>
-        </li>
-        <li class="item">
-            <h2 class="headline">Number three</h2>
-            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, distinctio ad corporis, laboriosam unde provident, architecto tenetur ea odio debitis delectus explicabo eum obcaecati vitae facere iusto laborum consequuntur neque.</span>
-        </li>
-    </ol>
+    <div class="row">
+        <div id="tool" class="col-12">
+            <a class="button-7">新增</a>
+        </div>
+        <ol class="list col-12">
+            <li class="item">
+                <div class="row">
+                    <div class="col-9">
+                        <h2 class="headline">Number one</h2>
+                        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, distinctio ad corporis, laboriosam unde provident, architecto tenetur ea odio debitis delectus explicabo eum obcaecati vitae facere iusto laborum consequuntur neque.</span>
+                    </div>
+                    <div class="col-3">
+                        <a class="button-7 ml-1" href="#">編輯</a>&nbsp;
+                        <a class="button-7" href="#">刪除</a>
+                    </div>
+                </div>
+
+
+            </li>
+            <li class="item">
+                <h2 class="headline">Number two</h2>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, distinctio ad corporis, laboriosam unde provident, architecto tenetur ea odio debitis delectus explicabo eum obcaecati vitae facere iusto laborum consequuntur neque.</span>
+            </li>
+            <li class="item">
+                <h2 class="headline">Number three</h2>
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, distinctio ad corporis, laboriosam unde provident, architecto tenetur ea odio debitis delectus explicabo eum obcaecati vitae facere iusto laborum consequuntur neque.</span>
+            </li>
+        </ol>
+    </div>
+
 </body>
 <script>
     $(function() {

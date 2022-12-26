@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/weather.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/weather.js"></script>
+
 </head>
 
 <body>
-    <div class="container px-1 px-sm-4 py-5 mx-auto">
+    <div id="app" class="container px-1 px-sm-4 py-5 mx-auto">
         <div class="row d-flex justify-content-center">
             <div class="card text-center pt-4 border-0">
                 <h4 id="city_name" class="mb-0">Moscow</h4>
@@ -34,7 +34,7 @@
                         <div class="text-center"><img class="symbol-img" src="https://i.imgur.com/Shrg84B.png"></div>
                         <h6><strong>-29&#176;</strong></h6>
                     </div>
-                    <div class="d-flex flex-column block active">
+                    <div class="d-flex flex-column block">
                         <small class="text-muted mb-0">WED</small>
                         <div class="text-center"><img class="symbol-img" src="https://i.imgur.com/Shrg84B.png"></div>
                         <h6><strong>-34&#176;</strong></h6>
@@ -53,6 +53,9 @@
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 
 </html>
