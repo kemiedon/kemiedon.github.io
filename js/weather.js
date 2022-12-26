@@ -5,8 +5,10 @@ const app = {
             district: '',
             num: 30,
             tempture: '',
+            main_icon: '',
             week: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-            week_tempture: []
+            week_tempture: [],
+            icons: []
         }
     },
     mounted() {
@@ -18,9 +20,15 @@ const app = {
                 this.city = res.data.records.locations[0].locationsName;
                 this.district = res.data.records.locations[0].location[0].locationName;
                 this.tempture = res.data.records.locations[0].location[0].weatherElement[0].time[0].elementValue[0].value + "&#176;";
+                main_icon = (parseInt(this.tempture) > 18) ? 'https://i.imgur.com/Shrg84B.png' : 'https://i.imgur.com/BeWfUuG.png';
+                for (let i = 0; i < res.data.records.locations[0].location[0].weatherElement[0].time.length; i += 2) {
+                    var degree = res.data.records.locations[0].location[0].weatherElement[0].time[i].elementValue[0].value;
 
-                for (let i = 0; i < res.records.locations[0].location[0].weatherElement[0].time.length; i += 2) {
-                    this.week_tempture.push(res.records.locations[0].location[0].weatherElement[0].time[i].elementValue[0].value + "&#176;");
+                    this.week_tempture.push(degree + "&#176;");
+                    if (degree > 18)
+                        icons.push('https://i.imgur.com/Shrg84B.png');
+                    else
+                        icons.push('https://i.imgur.com/BeWfUuG.png');
                 }
                 console.log(this.week_tempture);
             })
